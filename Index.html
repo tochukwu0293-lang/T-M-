@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtistConnect Hub - Unite Creators Worldwide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo"><i class="fas fa-palette"></i> ArtistConnect Hub</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#post">Share Link</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Connect • Create • Collaborate</h2>
+            <p>Join creators worldwide. Share your content and build connections!</p>
+            <button class="cta-btn" onclick="scrollToSection('post')">Share Your Link</button>
+        </div>
+    </section>
+
+    <section id="post" class="post-section">
+        <div class="container">
+            <h2>Share Your Content</h2>
+            <div class="post-form-container">
+                <form id="artistForm" class="artist-form">
+                    <div class="form-group">
+                        <label for="name">Artist Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="USA">United States</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="platform">Platform</label>
+                        <select id="platform" required>
+                            <option value="">Select Platform</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Content Link</label>
+                        <input type="url" id="link" placeholder="https://" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Post Link</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="artists" class="artists-feed">
+        <div class="container">
+            <h2>Recent Submissions</h2>
+            <div id="artistGrid" class="artist-grid"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+                      
